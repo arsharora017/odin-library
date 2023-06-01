@@ -144,7 +144,7 @@ table {
 }
 
 /***************************
-------------Body----------
+------------Main Page----------
 *****************************/
 .main-container {
   display: flex;
@@ -214,4 +214,42 @@ svg {
   justify-content: space-between;
   padding-bottom: 0.3rem;
   font-size: 1.1rem;
+}
+
+/***************************
+------------Main Body----------
+*****************************/
+
+main {
+  height: 100vh;
+}
+
+.new-book-btn-wrapper {
+  display: flex;
+  padding: 20px 0;
+}
+
+#new-book-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Form */
+
+form {
+  /* display: none; To hide the form */
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
