@@ -241,11 +241,15 @@ main {
   cursor: pointer;
 }
 
+#new-book-btn:hover {
+  background-color: rgb(85, 83, 83);
+}
+
 /* Form */
 
 form {
   /* To hide the form */
-  /* display: none; */
+  display: none;
   width: 500px;
   margin: 50px auto;
   text-align: center;
@@ -298,3 +302,5 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #444;
 }
+
+/* library cards */
