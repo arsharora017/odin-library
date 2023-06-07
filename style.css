@@ -141,6 +141,8 @@ table {
 :root {
   --bg-color: #f0eef1;
   --primary-color: #fffbfb;
+  --btn-bg-color: #333;
+  --btn-bg-hover: rgb(85, 83, 83);
 }
 
 /***************************
@@ -234,7 +236,7 @@ main {
   margin: 0 auto;
   padding: 20px;
   font-size: 20px;
-  background-color: grey;
+  background-color: var(--btn-bg-color);
   color: white;
   border: none;
   border-radius: 10px;
@@ -242,7 +244,7 @@ main {
 }
 
 #new-book-btn:hover {
-  background-color: rgb(85, 83, 83);
+  background-color: var(--btn-bg-hover);
 }
 
 /* Form */
@@ -292,7 +294,7 @@ input[type="submit"] {
   padding: 12px 20px;
   font-size: 18px;
   margin-top: 20px;
-  background-color: #333;
+  background-color: var(--btn-bg-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -300,7 +302,68 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #444;
+  background-color: var(--btn-bg-hover);
 }
 
 /* library cards */
+#library {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: end;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: 220px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.book-author {
+  margin: 5px 0 0 0;
+  font-size: 20px;
+}
+
+.book-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.book-pages {
+  margin: 0;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--btn-bg-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-bg-hover);
+  color: #fff;
+}
+
+.read-status {
+  background-color: rgb(145, 145, 226);
+  padding: 3px;
+  font-size: 16px;
+}
