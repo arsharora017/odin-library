@@ -24,7 +24,7 @@ function render() {
     let bookEl = document.createElement("div");
     bookEl.setAttribute("class", "book-card");
     bookEl.innerHTML = `
-    <h2 class="book-title">${book.title}</h2>
+    <h2 class="book-title">"${book.title}"</h2>
     <h3 class="book-author">by ${book.author}</h3>
     <p class="book-pages">${book.pages} pages</p>
     <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
@@ -46,13 +46,15 @@ function addBookToLibrary() {
   let pages = document.querySelector("#pages").value;
   let read = document.querySelector("#read").checked;
   let newBook = new Book(title, author, pages, read);
+
   myLibrary.push(newBook);
   render();
 }
 
 let newBookBtn = document.querySelector("#new-book-btn");
+let newBookForm = document.querySelector("#new-book-form");
 newBookBtn.addEventListener("click", function () {
-  let newBookForm = document.querySelector("#new-book-form");
+  // let newBookForm = document.querySelector("#new-book-form");
   newBookForm.style.display = "block";
 });
 
@@ -61,4 +63,10 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     addBookToLibrary();
+    resetForm();
+    newBookForm.style.display = "none";
   });
+
+function resetForm() {
+  newBookForm.reset();
+}
